@@ -66,7 +66,7 @@ if (!empty($_POST)) {
 
         }*/
 
-    switch ($_POST['sign']) {
+    /*switch ($_POST['sign']) {
 
         case 'plus':
             echo intval($_POST['val1']) + intval($_POST['val2']);
@@ -87,7 +87,15 @@ if (!empty($_POST)) {
         default:
             echo 'WTF !?!?';
             break;
+    }*/
+}
+
+function exposant($val1, $val2) {
+    $resultat = 1;
+    for($i = 0; $i<$val2; $i++) {
+        $resultat = resultat * $val1;
     }
+    return $resultat;
 }
 
 ?>
