@@ -65,37 +65,53 @@ if (!empty($_POST)) {
             echo 'WTF !?!?!';
 
         }*/
+    $result = 0;
 
-    /*switch ($_POST['sign']) {
+    switch ($_POST['sign']) {
 
         case 'plus':
-            echo intval($_POST['val1']) + intval($_POST['val2']);
+            $result = intval($_POST['val1']) + intval($_POST['val2']);
             break;
 
         case 'moins':
-            echo (intval($_POST['val1']) - intval($_POST['val2']));
+            $result = intval($_POST['val1']) - intval($_POST['val2']);
             break;
 
         case 'fois':
-            echo (intval($_POST['val1']) * intval($_POST['val2']));
+            $result = intval($_POST['val1']) * intval($_POST['val2']);
             break;
 
         case 'divise':
-            echo (intval($_POST['val1']) / intval($_POST['val2']));
+            $result = intval($_POST['val1']) / intval($_POST['val2']);
             break;
 
         default:
-            echo 'WTF !?!?';
+            $result = 'WTF !?!?';
             break;
-    }*/
+    }
 }
 
-function exposant($val1, $val2) {
+echo $_POST['val1'] . ' ' . $_POST['sign'] . ' ' . $_POST['val2'] . ' = ' . $result;
+
+function exposant($val1, $val2)
+{
     $resultat = 1;
-    for($i = 0; $i<$val2; $i++) {
+    for ($i = 0; $i < $val2; $i++) {
         $resultat = resultat * $val1;
     }
     return $resultat;
+}
+
+$val1 = "";
+$val2 = "";
+$sign = "";
+
+if (!empty($_POST['val1'])) {
+    $val1 = $_POST['val1'];
+}
+
+if (!empty($_POST['val2'])) {
+    $val1 = $_POST['val2'];
 }
 
 ?>
@@ -104,7 +120,7 @@ function exposant($val1, $val2) {
 
         <label for="val1">Val 1 </label>
 
-        <input type="text" name="val1" id="val1" />
+        <input type="text" name="val1" id="val1" value="<?php echo $val1 ?>" />
 
         <label for="sign">Sign </label>
 
@@ -126,7 +142,7 @@ function exposant($val1, $val2) {
 
         <label for="val2">Val 2 </label>
 
-        <input type="text" name="val2" id="val2" />
+        <input type="text" name="val2" id="val2" value="<?php echo $val2 ?>" />
 
         <input type="submit" value="calcule" />
 
