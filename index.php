@@ -65,6 +65,7 @@ if (!empty($_POST)) {
             echo 'WTF !?!?!';
 
         }*/
+
     $result = 0;
 
     switch ($_POST['sign']) {
@@ -124,20 +125,16 @@ if (!empty($_POST['val2'])) {
 
         <label for="sign">Sign </label>
 
-        <select name="sign" id="sign">
-
-            <option>plus</option>
-
-            <option>moins</option>
-
-            <option>fois</option>
-
-            <option>divise</option>
-
-            <option>exposant</option>
-
-            ​
-
+        <select name="sign" id="sign">    ​
+            <?php 
+            for($i=0; $i<count($options); $i++) {
+                echo '<option';
+                if($sign === $options[$i]) {
+                    echo 'selected';
+                }
+                echo ">".$options[$i]."</options>";
+            }
+            ?>
         </select>
 
         <label for="val2">Val 2 </label>
