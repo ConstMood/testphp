@@ -1,6 +1,6 @@
-<?php 
+<?php
 
-    /*
+/*
     echo $_POST['val1'].' '.$_POST['sign'].' '.$_POST['val2']. ' = ';
 
     .(intval($_POST['val1']) + intval($_POST['val2']));
@@ -62,22 +62,24 @@
             echo 'WTF !?!?!';
 
         }*/
+$val1 = $_POST['val1'];
+$val2 = $_POST['val2'];
+$sign = $_POST['sign'];
+$result = 0;
 
-    $result = 0;
+switch ($_POST['sign']) {
 
-    switch ($_POST['sign']) {
+    case 'plus':
+        $result = intval($_POST['val1']) + intval($_POST['val2']);
+        break;
 
-        case 'plus':
-            $result = intval($_POST['val1']) + intval($_POST['val2']);
-            break;
+    case 'moins':
+        $result = intval($_POST['val1']) - intval($_POST['val2']);
+        break;
 
-        case 'moins':
-            $result = intval($_POST['val1']) - intval($_POST['val2']);
-            break;
-
-        case 'fois':
-            $result = intval($_POST['val1']) * intval($_POST['val2']);
-            break;
+    case 'fois':
+        $result = intval($_POST['val1']) * intval($_POST['val2']);
+        break;
 
     case 'divise':
         $result = intval($_POST['val1']) / intval($_POST['val2']);
@@ -87,13 +89,9 @@
         $result = exposant(intval($_POST['val1']), intval($_POST['val2']));
         break;
 
-        default:
-            $result = 'WTF !?!?';
-            break;
-    }
+    default:
+        $result = 'WTF !?!?';
+        break;
+    };
 
-
-    $val1 = $_POST['val1'];
-    $val2 = $_POST['val2'];
-
-    $sign = $_POST['sign'];
+?>

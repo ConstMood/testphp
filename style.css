@@ -1,0 +1,119 @@
+.home {
+  height: fit-content;
+
+  font-family: "Poppins", sans-serif;
+
+}
+
+.homeFeedback {
+  height: 580px;
+  text-align: center;
+
+  font-family: "Poppins", sans-serif;
+}
+
+.middleFeedback {
+}
+
+#feedbackMessage {
+  margin-top: 200px;
+}
+
+#feedbackMessageButton {
+  width: 90px;
+  padding: 0 16px;
+
+  cursor: default;
+
+  border-radius: 2px;
+
+  font-family: "Poppins", sans-serif;
+
+  color: #14a098;
+}
+
+label {
+  color: #14a098;
+}
+
+.top {
+  background-color: #0f292f;
+
+  height: 40px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.headerButtons1 {
+  margin-left: 10px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+#calculatorButton {
+  width: 90px;
+  padding: 0 16px;
+
+  cursor: default;
+
+
+  font-family: "Poppins", sans-serif;
+
+  color: #14a098;
+}
+
+#feedbackButton {
+  width: 90px;
+  padding: 0 16px;
+
+  cursor: default;
+
+  border-radius: 2px;
+
+  font-family: "Poppins", sans-serif;
+
+  color: #14a098;
+}
+#contactButton {
+  width: 90px;
+  padding: 0 16px;
+
+  cursor: default;
+
+  border-radius: 2px;
+
+  font-family: "Poppins", sans-serif;
+
+  color: #14a098;
+}
+
+.middle {
+  height: 580px;
+
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+form {
+  margin-top: 200px;
+}
+
+.bottom {
+  background-color: #0f292f;
+}
+
+.bottom ol {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  color: #14a098;
+
+  list-style: none;
+}
